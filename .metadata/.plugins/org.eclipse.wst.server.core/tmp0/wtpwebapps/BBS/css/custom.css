@@ -1,0 +1,16 @@
+@font-face {
+  /* 사용한 폰트 이름 */
+  font-family: "BMJUA";
+  /* 적용할/다운받을 폰트 경로 및 타입 */
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/BMJUA.woff") format("woff");
+  /* 사용할 폰트 굵기 ( 기본 값 ) */
+  font-weight: normal;
+  /* 사용할 폰트 스타일 ( 기본 값 ) */
+  font-style: normal;
+}
+
+body {
+  /* 폰트는 상속되기 때문에 상위에서 선언해주면 모두 적용됨 */
+  font-family: "BMJUA", "Noto Sans KR", sans-serif;
+  transform : rotate(0.04deg); 
+}
