@@ -3,9 +3,6 @@
 <%@ page import="java.io.PrintWriter" %>
 <%@ page import="bbs.Bbs" %>
 <%@ page import="bbs.BbsDAO" %>
-<%@ page import="comment.Comment" %>
-<%@ page import="comment.CommentDAO" %>
-<%@ page import="java.util.ArrayList" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -188,6 +185,8 @@
 					</form>
 				</div>
 			</div>
+		</div>
+	</div>
 <script src="http://code.jquery.com/jquery-3.1.1.min.js"></script> 
 <script src="js/bootstrap.js"></script>
 
