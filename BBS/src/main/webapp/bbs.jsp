@@ -107,20 +107,32 @@
 				%>
 			</tbody>
 			</table>
-			<%
-				if(pageNumber != 1){
-			%>
-				<a href="bbs.jsp?pageNumber=<%=pageNumber -1%>"class="btn btn-success btn-arraw-left">이전</a>
-			<%
-				}if(bbsDAO.nextPage(pageNumber+1)){
-			%>
-				<a href="bbs.jsp?pageNumber=<%=pageNumber +1%>"class="btn btn-success btn-arraw-left">다음</a>
-			<%
-				}
-			%>
-		
-			<a href="write.jsp" class="btn btn-primary pull-right">글쓰기</a>
-</div>
+			<div class=container style="text-align: center">
+				<%
+					if (pageNumber != 1) {//이전페이지로
+				%>
+				<a href="bbs.jsp?pageNumber=<%=pageNumber - 1%>">◀ 이전</a>
+				<%
+					}
+				%>
+				<%
+					int n = (int) (bbsDAO.getCount() / 10 + 1);
+					for (int i = 1; i <= n; i++) {
+				%>
+				<a href="bbs.jsp?pageNumber=<%=i%>">|<%=i%>|
+				</a>
+				<%
+					}
+				%>
+				<%
+					if (bbsDAO.nextPage(pageNumber + 1)) {//다음페이지가 존재하는ㄱ ㅏ
+				%>
+				<a href="bbs.jsp?pageNumber=<%=pageNumber + 1%>">다음 ▶</a>
+				<%
+					}
+				%>
+				<a href="write.jsp" class="btn btn-success pull-right">글쓰기</a>
+			</div>
 <script src="http://code.jquery.com/jquery-3.1.1.min.js"></script> 
 <script src="js/bootstrap.js"></script>
 

@@ -1,0 +1,16 @@
+ @font-face {
+  /* ����� ��Ʈ �̸� */
+  font-family: "BMJUA";
+  /* ������/�ٿ���� ��Ʈ ��� �� Ÿ�� */
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/BMJUA.woff") format("woff");
+  /* ����� ��Ʈ ���� ( �⺻ �� ) */
+  font-weight: normal;
+  /* ����� ��Ʈ ��Ÿ�� ( �⺻ �� ) */
+  font-style: normal;
+}
+
+body {
+  /* ��Ʈ�� ��ӵǱ� ������ �������� �������ָ� ��� ����� */
+  font-family: "BMJUA", "Noto Sans KR", sans-serif;
+  transform : rotate(0.04deg); 
+}
