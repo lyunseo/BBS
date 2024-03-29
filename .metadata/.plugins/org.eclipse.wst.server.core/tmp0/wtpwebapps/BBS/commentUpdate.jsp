@@ -11,7 +11,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<meta name ="viewport" content="width=device-width", initial-scale="1">
+<meta name ="viewport" content="width=device-width" initial-scale="1">
 <link rel="stylesheet" href="css/bootstrap.css">
 <link rel="stylesheet" href="css/custom.css">
 <title>JSP 게시판 웹 사이트</title>
@@ -129,6 +129,8 @@
 					}
 				%>
 				<br><br>
+		</div>
+	</div>
 	<div class="container">
          <div class="row">
             <table class="table table-striped" style="text-align: center; border: 1px solid #dddddd">
@@ -138,22 +140,21 @@
                </tr>
         
      <div class="container">
-		<div class="row">
-			<form method="post" action="commentUpdateAction.jsp?bbsID=<%=bbsID%>&commentID=<%=commentID%>">
-				<table class="table table-striped" style="text-align: center; border: 1px solid #dddddd">
-					<tbody>
-						<tr>
-							<td><input type="text" class="form-control" placeholder="댓글 쓰기" name="commentContent" maxlength="300" value=<%=comment.getCommentContent() %>></td>
-						</tr>
-					</tbody>
-				</table>
-				<input type="submit" class="btn btn-success pull-right" value="댓글수정">
-		</form>
+	     <div class="row">
+				<form method="post" action="commentUpdateAction.jsp?bbsID=<%=bbsID%>&commentID=<%=commentID%>">
+					<table class="table table-striped" style="text-align: center; border: 1px solid #dddddd">
+						<tbody>
+							<tr>
+								<td><input type="text" class="form-control" placeholder="댓글 쓰기" name="commentContent" maxlength="300" value=<%=comment.getCommentContent() %>></td>
+							</tr>
+						</tbody>
+					</table>
+					<input type="submit" class="btn btn-success pull-right" value="댓글수정">
+			</form>
 		</div>
-	</div>
-                  
-               
-            </table>
+     </div>
+     
+          </table>
 	</div>
 	</div>
 	<script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>

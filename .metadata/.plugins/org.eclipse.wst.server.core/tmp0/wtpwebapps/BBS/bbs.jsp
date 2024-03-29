@@ -125,7 +125,7 @@
 					}
 				%>
 				<%
-					if (bbsDAO.nextPage(pageNumber + 1)) {//다음페이지가 존재하는ㄱ ㅏ
+					if (bbsDAO.nextPage(pageNumber + 1)) {//다음페이지가 존재하는가
 				%>
 				<a href="bbs.jsp?pageNumber=<%=pageNumber + 1%>">다음 ▶</a>
 				<%
@@ -133,6 +133,7 @@
 				%>
 				<a href="write.jsp" class="btn btn-success pull-right">글쓰기</a>
 			</div>
+</div>
 <script src="http://code.jquery.com/jquery-3.1.1.min.js"></script> 
 <script src="js/bootstrap.js"></script>
 

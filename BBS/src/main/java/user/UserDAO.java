@@ -5,11 +5,11 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
-// ½ÇÁ¦·Î db¿¡ Á¢±ÙÇØ¼­ µ¥ÀÌÅÍ¸¦ °¡Á®¿À°Å³ª ³Ö´Â ¿ªÇÒÀ» ÇÏ´Â µ¥ÀÌÅÍ Á¢±Ù °´Ã¼
+// ì‹¤ì œë¡œ dbì— ì ‘ê·¼í•´ì„œ ë°ì´í„°ë¥¼ ê°€ì ¸ì˜¤ê±°ë‚˜ ë„£ëŠ” ì—­í• ì„ í•˜ëŠ” ë°ì´í„° ì ‘ê·¼ ê°ì²´
 public class UserDAO {
 	
 	private Connection conn;
-	private PreparedStatement pstmt; //ÇØÅ·¹æÁö¸¦ À§ÇØ »ç¿ë
+	private PreparedStatement pstmt; //í•´í‚¹ë°©ì§€ë¥¼ ìœ„í•´ ì‚¬ìš©
 	private ResultSet rs;
 	
 	public UserDAO() {
@@ -24,23 +24,23 @@ public class UserDAO {
 		}
 	}
 	public int login(String userID, String userPassword) {
-		String SQL = "SELECT userPassword FROM USER WHERE userID = ?"; //¸Å°³º¯¼ö·Î µé¾î¿Â userID¸¦ ?¿¡ µé¾î°¥ ¼ö ÀÖ°Ô ÇÔ
+		String SQL = "SELECT userPassword FROM USER WHERE userID = ?"; //ë§¤ê°œë³€ìˆ˜ë¡œ ë“¤ì–´ì˜¨ userIDë¥¼ ?ì— ë“¤ì–´ê°ˆ ìˆ˜ ìˆê²Œ í•¨
 		try {
 			pstmt = conn.prepareStatement(SQL);
 			pstmt.setString(1, userID);
-			rs = pstmt.executeQuery(); //ÇÏ³ªÀÇ °´Ã¼¿¡ ½ÇÇà°á°ú ³Ö¾îÁÜ
+			rs = pstmt.executeQuery(); //í•˜ë‚˜ì˜ ê°ì²´ì— ì‹¤í–‰ê²°ê³¼ ë„£ì–´ì¤Œ
 			if(rs.next()) {
 				if(rs.getString(1).equals(userPassword)) {
-					return 1; // ·Î±×ÀÎ ¼º°ø
+					return 1; // ë¡œê·¸ì¸ ì„±ê³µ
 				}
 				else
-					return 0; //ºñ¹Ğ¹øÈ£ ºÒÀÏÄ¡
+					return 0; //ë¹„ë°€ë²ˆí˜¸ ë¶ˆì¼ì¹˜
 			}
-			return -1; //¾ÆÀÌµğ x
+			return -1; //ì•„ì´ë”” x
 		}catch (Exception e) {
 			e.printStackTrace();
 		}
-		return -2; //µ¥ÀÌÅÍº£ÀÌ½º ¿À·ù
+		return -2; //ë°ì´í„°ë² ì´ìŠ¤ ì˜¤ë¥˜
 	}
 	public int join(User user) {
 		String SQL = "INSERT INTO USER VALUES(?, ?, ?, ?, ?)";
@@ -54,6 +54,6 @@ public class UserDAO {
 			return pstmt.executeUpdate();
 		}catch(Exception e) {
 			e.printStackTrace();
-		}return -1; //µ¥ÀÌÅÍº£ÀÌ½º ¿À·ù
+		}return -1; //ë°ì´í„°ë² ì´ìŠ¤ ì˜¤ë¥˜
 	}
 }

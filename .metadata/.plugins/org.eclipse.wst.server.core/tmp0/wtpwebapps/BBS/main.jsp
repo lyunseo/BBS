@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width", initial-scale="1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="css/bootstrap.css">
 <link rel="stylesheet" href="css/custom.css">
 <title>JSP 게시판 웹 사이트</title>
@@ -73,7 +73,7 @@
       <h3>웹 사이트에 방문하신 걸 환영합니다!</h3>
       <p>JSP 부트스트랩 웹사이트
       </p>
-      <h7>클릭 시 회원가입 페이지로 이동<p/></h7>
+      <p>클릭 시 회원가입 페이지로 이동<p/>
       <a class="btn btn-primary btn-pull" href="join.jsp" role="button">click!</a>
     </div>
   </div>

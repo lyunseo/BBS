@@ -1,7 +1,2 @@
 INDEX VERSION 1.4+C:\Users\user1\Desktop\bbsStudy\wk\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
-2426947076.index
 3819707233.index
-749074513.index
-3138700561.index
-913494579.index
-3439618959.index

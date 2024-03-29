@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width", initial-scale="1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="css/bootstrap.css">
 <link rel="stylesheet" href="css/custom.css">
 <title>JSP 게시판 웹 사이트</title>
@@ -46,7 +46,7 @@
 	<div class="col-lg-4">
 		<div class="jumbotron" style="padding-top: 20px;">
 			<form method="post" action="loginAction.jsp">
-				<h3 style="text-align: center style="background-color: red;">로그인 화면</h3>
+				<h3 style="text-align: center; background-color: red;">로그인 화면</h3>
 				<div class="form-group">
 					<input type="text" class="form-control" placeholder="아이디" name="userID" maxlength="20">
 				</div>
